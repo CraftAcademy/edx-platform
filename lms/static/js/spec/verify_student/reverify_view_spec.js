@@ -5,7 +5,7 @@ define(['jquery', 'common/js/spec_helpers/template_helpers', 'js/verify_student/
     function( $, TemplateHelpers, ReviewPhotosStepView, ReverifyView ) {
         'use strict';
 
-        describe( 'edx.verify_student.ReverifyView', function() {
+        xdescribe( 'edx.verify_student.ReverifyView', function() {
 
             var TEMPLATES = [
                 "webcam_photo",

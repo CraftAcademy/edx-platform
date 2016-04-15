@@ -10,7 +10,7 @@ define([
     function( $, _, Backbone, AjaxHelpers, TemplateHelpers, ReviewPhotosStepView, VerificationModel ) {
         'use strict';
 
-        describe( 'edx.verify_student.ReviewPhotosStepView', function() {
+        xdescribe( 'edx.verify_student.ReviewPhotosStepView', function() {
 
             var STEP_DATA = {},
                 FULL_NAME = "Test User",
