@@ -2,6 +2,7 @@ define(['common/js/spec_helpers/ajax_helpers', 'js/ccx/schedule'],
     function(AjaxHelpers) {
         describe("edx.ccx.schedule.ScheduleView", function() {
             var view = null;
+            var data;
 
             beforeEach(function() {
                 loadFixtures("js/fixtures/ccx/schedule.html");
