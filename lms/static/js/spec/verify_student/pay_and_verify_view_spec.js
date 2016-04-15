@@ -2,7 +2,7 @@ define(['jquery', 'common/js/spec_helpers/template_helpers', 'js/verify_student/
     function( $, TemplateHelpers, PayAndVerifyView ) {
         'use strict';
 
-        describe( 'edx.verify_student.PayAndVerifyView', function() {
+        xdescribe( 'edx.verify_student.PayAndVerifyView', function() {
 
             var TEMPLATES = [
                 'enrollment_confirmation_step',
