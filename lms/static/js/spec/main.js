@@ -47,7 +47,8 @@
             'squire': 'xmodule_js/common_static/js/vendor/Squire',
             'jasmine-imagediff': 'xmodule_js/common_static/js/vendor/jasmine-imagediff',
             'jasmine-stealth': 'xmodule_js/common_static/js/vendor/jasmine-stealth',
-            'jasmine-waituntil': 'xmodule_js/common_static/js/vendor/jasmine-waituntil',
+            'jasmine-waituntil': 'xmodule_js/common_static/js/libs/jasmine-waituntil',
+            'jasmine-extensions': 'xmodule_js/common_static/js/libs/jasmine-extensions',
             'draggabilly': 'xmodule_js/common_static/js/vendor/draggabilly.pkgd',
             'domReady': 'xmodule_js/common_static/js/vendor/domReady',
             'mathjax': '//cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-MML-AM_SVG&delayStartupUntil=configured', // jshint ignore:line
@@ -258,6 +259,9 @@
                 deps: ['underscore', 'underscore.string']
             },
             'jasmine-waituntil': {
+                deps: ['jquery']
+            },
+            'jasmine-extensions': {
                 deps: ['jquery']
             },
             'xblock/core': {

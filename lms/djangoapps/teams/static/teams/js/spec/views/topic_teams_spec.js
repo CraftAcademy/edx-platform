@@ -65,7 +65,7 @@ define([
             var teamsView = createTopicTeamsView();
             spyOn(Backbone.history, 'navigate');
             teamsView.$('.browse-teams').click();
-            expect(Backbone.history.navigate.calls.mostRecent().args[0]).toContain('browse');
+            expect(Backbone.history.navigate.calls.mostRecent().args[0]).toBe('browse');
         });
 
         it('gives the search field focus when clicking on the search teams link', function () {
@@ -79,7 +79,7 @@ define([
             var teamsView = createTopicTeamsView();
             spyOn(Backbone.history, 'navigate');
             teamsView.$('a.create-team').click();
-            expect(Backbone.history.navigate.calls.mostRecent().args[0]).toContain(
+            expect(Backbone.history.navigate.calls.mostRecent().args[0]).toBe(
                 'topics/' + TeamSpecHelpers.testTopicID + '/create-team'
             );
         });

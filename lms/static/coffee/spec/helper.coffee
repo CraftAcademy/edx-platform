@@ -52,9 +52,6 @@ jasmine.stubVideoPlayer = (context, enableParts, createPlayer=true) ->
   if createPlayer
     return new VideoPlayer(video: context.video)
 
-# This is forbidden in jasmine 2. Spies must be created in a before function or a spec.
-# spyOn(window, 'onunload')
-
 # Stub Youtube API
 window.YT =
   PlayerState:

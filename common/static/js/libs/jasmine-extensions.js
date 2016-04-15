@@ -20,7 +20,9 @@
     // Add custom Jasmine matchers.
     beforeEach(function() {
 
-        jasmine.addMatchers(window.imagediff.jasmine);
+        if (window.imagediff) {
+            jasmine.addMatchers(window.imagediff.jasmine);
+        }
 
         jasmine.addMatchers({
             toHaveAttrs: function() {
