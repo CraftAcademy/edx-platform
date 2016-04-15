@@ -1,6 +1,6 @@
 define([
-    'jquery', 'underscore', 'annotator_1.2.9', 'logger', 'js/edxnotes/views/notes_factory', 'js/spec/edxnotes/custom_matchers'
-], function($, _, Annotator, Logger, NotesFactory, customMatchers) {
+    'jquery', 'underscore', 'annotator_1.2.9', 'logger', 'js/edxnotes/views/notes_factory'
+], function($, _, Annotator, Logger, NotesFactory) {
     'use strict';
     describe('EdxNotes Accessibility Plugin', function() {
         function keyDownEvent (key) {
@@ -25,7 +25,6 @@ define([
 
         beforeEach(function() {
             this.KEY = $.ui.keyCode;
-            customMatchers(this);
             loadFixtures('js/fixtures/edxnotes/edxnotes_wrapper.html');
             this.annotator =  NotesFactory.factory(
                 $('div#edx-notes-wrapper-123').get(0), {

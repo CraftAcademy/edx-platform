@@ -1,6 +1,6 @@
 define([
-    'logger', 'js/edxnotes/utils/logger', 'js/spec/edxnotes/custom_matchers'
-], function(Logger, NotesLogger, customMatchers) {
+    'logger', 'js/edxnotes/utils/logger'
+], function(Logger, NotesLogger) {
     'use strict';
     describe('Edxnotes NotesLogger', function() {
         var getLogger = function(id, mode) {
@@ -11,7 +11,6 @@ define([
             spyOn(window.console, 'log');
             spyOn(window.console, 'error');
             spyOn(Logger, 'log');
-            customMatchers(this);
         });
 
         it('keeps a correct history of logs', function() {

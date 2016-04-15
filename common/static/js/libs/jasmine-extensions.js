@@ -62,6 +62,15 @@
                         };
                     }
                 };
+            },
+            toHaveIndex: function () {
+                return {
+                    compare: function (actual, expected) {
+                        return {
+                            pass: $(actual).index() === expected
+                        }
+                    }
+                };
             }
         });
     });
