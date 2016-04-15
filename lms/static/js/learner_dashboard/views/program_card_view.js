@@ -22,13 +22,18 @@
 
                 tpl: _.template(programCardTpl),
 
-                initialize: function() {
+                initialize: function(data) {
+                    this.progressCollection = data.context.progressCollection; 
+                    this.progressModel = this.progressCollection.findWhere({
+                        programId: this.model.get('id')
+                    });
                     this.render();
                 },
 
                 render: function() {
-                    var templated = this.tpl(this.model.toJSON());
-                    this.$el.html(templated);
+                    var data = $.extend({}, this.model.toJSON(), this.getProgramProgress());
+
+                    this.$el.html(this.tpl(data));
                     this.postRender();
                 },
 
@@ -40,6 +45,16 @@
                             this.reLoadBannerImage();
                         }.bind(this), 100);
                     }
+                },
+
+                getProgramProgress: function() {
+                    var progress = this.progressModel.toJSON();
+                    
+                    progress.total_courses = progress.completed + progress.in_progress + progress.not_started;
+
+                    return {
+                        progress: progress
+                    };
                 },
 
                 // Defer loading the rest of the page to limit FOUC

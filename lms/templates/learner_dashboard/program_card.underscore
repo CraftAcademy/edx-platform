@@ -27,4 +27,13 @@
     </div>
 </div>
 <div class="progress">
+    <p><%= interpolate(
+        gettext('You have earned Verified Certificates in %(completed_courses)s of the %(total_courses)s courses so far.'),
+        {completed_courses: progress.completed, total_courses: progress.total_courses}, true
+    ) %></p>
+    <div class="status">
+        <div class="complete"><span class="sr"><%- progress.completed %></span></div>
+        <div class="in-progress"><span class="sr"><%- progress.in_progress %></span></div>
+        <div class="not-started"><span class="sr"><%- progress.not_started %></span></div>
+    </div>
 </div>
