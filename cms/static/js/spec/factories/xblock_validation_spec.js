@@ -10,6 +10,10 @@ define(['jquery', 'js/factories/xblock_validation', 'common/js/spec_helpers/temp
                 messageDiv = $('.messages');
             });
 
+            afterEach(function () {
+                $('.messages').remove();
+            });
+
             it('Does not attach a view if messages is empty', function() {
                 XBlockValidationFactory({"empty": true}, false, false, messageDiv);
                 expect(messageDiv.children().length).toEqual(0);
